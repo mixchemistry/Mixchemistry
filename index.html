@@ -19,21 +19,17 @@
       color: #fff;
       text-align: center;
       padding: 60px 20px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .hero img {
       width: 160px;
       margin-bottom: 20px;
+      animation: fadeInDown 1.5s ease-in-out;
     }
 
-    .hero h1 {
-      font-size: 34px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
+    .hero h1, .hero p {
+      animation: fadeInUp 2s ease-in-out;
     }
 
     .btn {
@@ -49,58 +45,33 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: all 0.3s ease;
       text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s forwards;
     }
 
-    .btn i {
-      margin-left: 8px;
-    }
+    .btn:nth-child(1) { animation-delay: 0.3s; }
+    .btn:nth-child(2) { animation-delay: 0.5s; }
+    .btn:nth-child(3) { animation-delay: 0.7s; }
 
     .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
     }
 
-    .btn-main {
-      background-color: #1d3557;
-    }
-    .btn-main:hover {
-      background-color: #457b9d;
-    }
-
-    .btn-video {
-      background-color: #ff5722;
-    }
-    .btn-video:hover {
-      background-color: #e64a19;
-    }
-
-    .btn-whatsapp {
-      background-color: #25d366;
-    }
-    .btn-whatsapp:hover {
-      background-color: #1ebe5d;
-    }
-
-    .btn-facebook {
-      background-color: #1877f2;
-    }
-    .btn-facebook:hover {
-      background-color: #145dbf;
-    }
-
-    .btn-youtube {
-      background-color: #ff0000;
-    }
-    .btn-youtube:hover {
-      background-color: #cc0000;
-    }
-
-    .btn-tiktok {
-      background-color: #000000;
-    }
-    .btn-tiktok:hover {
-      background-color: #222222;
-    }
+    /* ألوان الأزرار */
+    .btn-main { background-color: #1d3557; }
+    .btn-main:hover { background-color: #457b9d; }
+    .btn-video { background-color: #ff5722; }
+    .btn-video:hover { background-color: #e64a19; }
+    .btn-whatsapp { background-color: #25d366; }
+    .btn-whatsapp:hover { background-color: #1ebe5d; }
+    .btn-facebook { background-color: #1877f2; }
+    .btn-facebook:hover { background-color: #145dbf; }
+    .btn-youtube { background-color: #ff0000; }
+    .btn-youtube:hover { background-color: #cc0000; }
+    .btn-tiktok { background-color: #000000; }
+    .btn-tiktok:hover { background-color: #222222; }
 
     .section {
       text-align: center;
@@ -112,6 +83,7 @@
       margin-bottom: 25px;
       color: #1d3557;
       font-weight: 700;
+      animation: fadeIn 2s ease-in-out;
     }
 
     footer {
@@ -121,6 +93,25 @@
       color: #fff;
       margin-top: 40px;
       font-size: 14px;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -132,48 +123,28 @@
   </section>
 
   <section class="section">
-    <a href="https://mix-chemistry.com/home" target="_blank" class="btn btn-main">
-      🌐 المنصة
-    </a>
-    <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank" class="btn btn-video">
-      🎥 ازاي تشترك في المنصة
-    </a>
+    <a href="https://mix-chemistry.com/home" target="_blank" class="btn btn-main">🌐 المنصة</a>
+    <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank" class="btn btn-video">🎥 ازاي تشترك في المنصة</a>
   </section>
 
   <section class="section">
     <div class="section-title">الدعم الفني</div>
-    <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp">
-      <i class="fab fa-whatsapp"></i> واتساب الدعم الفني
-    </a>
+    <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب الدعم الفني</a>
   </section>
 
   <section class="section">
     <div class="section-title">الدعم العلمي</div>
-    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">
-      <i class="fab fa-whatsapp"></i> الدعم العلمي - 3 ث (رقم 1)
-    </a>
-    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">
-      <i class="fab fa-whatsapp"></i> الدعم العلمي - 3 ث (رقم 2)
-    </a>
-    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">
-      <i class="fab fa-whatsapp"></i> الدعم العلمي - 2 ث
-    </a>
-    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">
-      <i class="fab fa-whatsapp"></i> الدعم العلمي - 1 ث
-    </a>
+    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> 3 ث (رقم 1)</a>
+    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> 3 ث (رقم 2)</a>
+    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> 2 ث</a>
+    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> 1 ث</a>
   </section>
 
   <section class="section">
     <div class="section-title">تابعنا على</div>
-    <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook">
-      <i class="fab fa-facebook"></i> فيسبوك
-    </a>
-    <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube">
-      <i class="fab fa-youtube"></i> يوتيوب
-    </a>
-    <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok">
-      <i class="fab fa-tiktok"></i> تيك توك
-    </a>
+    <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook"></i> فيسبوك</a>
+    <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
+    <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok"><i class="fab fa-tiktok"></i> تيك توك</a>
   </section>
 
   <footer>
