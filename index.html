@@ -2,120 +2,138 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>ميكس كيميا - مستر محمد عارف</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mix Chemistry - مستر محمد عارف</title>
   <style>
     body {
-      font-family: 'Cairo', sans-serif;
+      font-family: 'Tajawal', Arial, sans-serif;
       margin: 0;
-      background: #f8f9fa;
+      padding: 0;
+      background: #f4f6f9;
       color: #333;
-    }
-    .hero {
-      background: linear-gradient(135deg, #1d3557, #457b9d);
-      color: #fff;
       text-align: center;
-      padding: 60px 20px;
     }
-    .hero img {
-      width: 160px;
-      margin-bottom: 20px;
-    }
-    .hero h1 { font-size: 34px; margin-bottom: 15px; }
-    .hero p { font-size: 20px; margin-bottom: 30px; }
-    .btn {
-      display: block;
-      width: 280px;
-      margin: 15px auto;
-      padding: 15px;
-      border-radius: 10px;
-      font-size: 18px;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
-    .btn:hover { transform: translateY(-3px); }
-    .btn-video { background-color: #ff4500; }
-    .btn-video:hover { background-color: #e03d00; }
-    .btn-whatsapp { background-color: #25d366; }
-    .btn-whatsapp:hover { background-color: #1ebe5d; }
-    .btn-facebook { background-color: #1877f2; }
-    .btn-facebook:hover { background-color: #145dbf; }
-    .btn-youtube { background-color: #ff0000; }
-    .btn-youtube:hover { background-color: #cc0000; }
-    .btn-tiktok { background-color: #000000; }
-    .btn-tiktok:hover { background-color: #222222; }
-    .btn-telegram { background-color: #0088cc; }
-    .btn-telegram:hover { background-color: #006fa1; }
-    .section { text-align: center; padding: 50px 20px; }
-    .section-title {
-      font-size: 26px; margin-bottom: 25px; color: #1d3557; font-weight: 700;
-    }
-    footer {
-      text-align: center;
+
+    header {
+      background: #004d40;
+      color: white;
       padding: 20px;
-      background: #1d3557;
-      color: #fff;
-      margin-top: 40px;
-      font-size: 14px;
     }
-    i { margin-left: 8px; }
+
+    header img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+    }
+
+    /* ألوان الزرار */
+    .btn-tech { background: #6a1b9a; }        /* الدعم الفني */
+    .btn-3th { background: #1b5e20; }         /* 3ث أخضر غامق */
+    .btn-2th { background: #1565c0; }         /* 2ث أزرق */
+    .btn-1th { background: #ef6c00; }         /* 1ث برتقالي */
+    .btn-platform { background: #c62828; }    /* المنصة */
+    .btn-how { background: #00897b; }         /* ازاي تشترك */
+    .btn-facebook { background: #1877f2; }
+    .btn-youtube { background: #ff0000; }
+    .btn-tiktok { background: #000000; }
+    .btn-telegram { background: #229ED9; }
+    .btn-instagram { background: #E1306C; }
+    .btn-fbgroup { background: #4267B2; }
+    .btn-whatsapp { background: #25D366; }
+
+    section {
+      padding: 20px;
+    }
+
+    .support-group {
+      margin: 20px auto;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .socials {
+      margin-top: 30px;
+    }
+
+    .socials h3 {
+      margin-bottom: 15px;
+    }
+
+    .socials .btn {
+      margin: 6px;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 15px;
+      background: #004d40;
+      color: white;
+    }
   </style>
 </head>
 <body>
-  <section class="hero">
+
+  <header>
     <img src="logo.png" alt="شعار ميكس كيميا">
-    <h1>اهلا بيك في عيلتنا</h1>
-    <p>مع ميكس كيميا - مستر محمد عارف</p>
+    <h1>أهلا بيك في عيلتنا - ميكس كيميا (مستر محمد عارف)</h1>
+  </header>
+
+  <section>
+    <a href="https://wa.me/201505262848" class="btn btn-tech">📞 الدعم الفني</a>
+
+    <div class="support-group">
+      <h2>الدعم العلمي</h2>
+      <!-- 3 ث -->
+      <a href="https://wa.me/201557102966" class="btn btn-3th">📘 3 ث - رقم 1</a>
+      <a href="https://wa.me/201559828600" class="btn btn-3th">📘 3 ث - رقم 2</a>
+      <br>
+      <!-- 2 ث -->
+      <a href="https://wa.me/201557102966" class="btn btn-2th">📗 2 ث</a>
+      <br>
+      <!-- 1 ث -->
+      <a href="https://wa.me/201559828600" class="btn btn-1th">📙 1 ث</a>
+    </div>
+
+    <a href="https://mix-chemistry.com/home" class="btn btn-platform">🌐 المنصة</a>
+    <a href="https://youtu.be/zzdqyYfpw88?feature=shared" class="btn btn-how">🎥 ازاي تشترك في المنصة</a>
   </section>
 
-  <section class="section">
-    <a href="https://mix-chemistry.com/home" target="_blank" class="btn" style="background-color:#1d3557;">
-      🌐 المنصة
-    </a>
-    <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank" class="btn btn-video">
-      🎥 ازاي تشترك في المنصة
-    </a>
-    <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp">
-      📢 قناة الواتساب
-    </a>
-  </section>
-
-  <section class="section">
-    <div class="section-title">الدعم الفني</div>
-    <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp">💬 واتساب الدعم الفني</a>
-  </section>
-
-  <section class="section">
-    <div class="section-title">الدعم العلمي</div>
-    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📚 3 ث (رقم 1)</a>
-    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📚 3 ث (رقم 2)</a>
-    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📘 2 ث</a>
-    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📗 1 ث</a>
-  </section>
-
-  <section class="section">
-    <div class="section-title">تابعنا على</div>
-    <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook">
-      <i class="fab fa-facebook"></i> فيسبوك
-    </a>
-    <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube">
-      <i class="fab fa-youtube"></i> يوتيوب
-    </a>
-    <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok">
-      <i class="fab fa-tiktok"></i> تيكتوك
-    </a>
-    <a href="https://t.me/+HOTbyb-hGvQ4ZTI8" target="_blank" class="btn btn-telegram">
-      <i class="fab fa-telegram"></i> تليجرام 3ث
-    </a>
+  <section class="socials">
+    <h3>تابعنا على</h3>
+    <a href="https://facebook.com/mixchemistry1" class="btn btn-facebook">فيسبوك</a>
+    <a href="https://youtube.com/@mixchemistry1" class="btn btn-youtube">يوتيوب</a>
+    <a href="https://tiktok.com/@mixchemistry1" class="btn btn-tiktok">تيكتوك</a>
+    <a href="https://t.me/+Gv-9olKBXtg3YTQ0" class="btn btn-telegram">تليجرام 3ث</a>
+    <a href="https://instagram.com/mixchemistry1" class="btn btn-instagram">انستجرام</a>
+    <a href="https://m.facebook.com/groups/334354954908345/?ref=share&mibextid=NSMWBT" class="btn btn-fbgroup">جروب الفيسبوك</a>
+    <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" class="btn btn-whatsapp">قناة الواتساب</a>
   </section>
 
   <footer>
-    &copy; 2025 ميكس كيميا - جميع الحقوق محفوظة
+    <p>© 2025 Mix Chemistry - جميع الحقوق محفوظة</p>
   </footer>
+
 </body>
 </html>
