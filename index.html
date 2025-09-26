@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="منصة ميكس كيميا - مستر محمد عارف، دروس الكيمياء لجميع المراحل الثانوية.">
   <link rel="icon" href="logo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
@@ -14,47 +14,51 @@
       background: #f8f9fa;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
 
     .hero {
       background: linear-gradient(135deg, #1d3557, #457b9d);
       color: #fff;
       text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
 
     .hero img {
-      width: 150px;
+      width: 160px;
       margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 20px;
-      margin-bottom: 0;
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0;
     }
 
     .btn {
       display: inline-block;
       margin: 10px;
-      padding: 22px 40px; /* أكبر */
-      border-radius: 55px;
-      font-size: 22px; /* أكبر */
-      font-weight: 700;
+      padding: 18px 35px;
+      border-radius: 50px;
+      font-size: 20px;
+      font-weight: 600;
       color: #fff;
       text-decoration: none;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
+      min-width: 250px; /* عرض موحّد */
       text-align: center;
     }
 
     .btn:hover {
-      transform: scale(1.1);
-      filter: brightness(1.1);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     }
 
     .btn-main {background-color: #1d3557;}
@@ -67,30 +71,40 @@
     .btn-telegram {background-color: #0088cc;}
     .btn-group {background-color: #6c757d;}
 
-    .section {padding: 50px 20px; text-align: center;}
-    .section-title {font-size: 28px; margin-bottom: 30px; font-weight: 700; color: #1d3557;}
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 35px;
+      font-weight: 700;
+      color: #1d3557;
+    }
 
     /* شكل الدرج */
     .staircase {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      gap: 20px;
     }
+
     .column {
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 20px;
     }
+
     .column.right {align-items: flex-end;}
     .column.left {align-items: flex-start;}
 
-    .column a:nth-child(1) { width: 200px; }
-    .column a:nth-child(2) { width: 250px; }
-    .column a:nth-child(3) { width: 300px; }
-
-    .center-btn {text-align: center; margin-top: 40px;}
-    .center-btn .btn {width: 340px;}
+    .center-btn {
+      text-align: center;
+      margin-top: 30px;
+    }
 
     footer {
       text-align: center;
@@ -98,7 +112,18 @@
       background: #1d3557;
       color: #fff;
       font-size: 16px;
-      margin-top: 50px;
+      margin-top: 60px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .staircase {
+        flex-direction: column;
+        align-items: center;
+      }
+      .column.right, .column.left {
+        align-items: center;
+      }
     }
   </style>
 </head>
