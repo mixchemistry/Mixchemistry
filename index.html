@@ -12,15 +12,15 @@
     body {
       font-family: 'Cairo', sans-serif;
       margin: 0;
-      background: #f8f9fa;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     }
 
     /* ====== HERO ====== */
     .hero {
       background: url('hero-bg.jpeg') no-repeat center center/cover;
       color: #fff;
-      padding: 40px 20px;
-      min-height: 300px; /* رجعت الحجم زي الأول */
+      padding: 40px;
+      min-height: 350px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
@@ -33,21 +33,21 @@
 
     .hero-text {
       text-align: right;
-      margin-top: 40px; /* نزول الكلام تحت شوية */
+      margin-top: 80px;
     }
 
     .hero-text h1 {
-      font-size: 36px;
+      font-size: 40px;
       font-weight: 700;
       margin: 0 0 10px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     }
 
     .hero-text p {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 500;
       margin: 0;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
     }
 
     /* ====== BUTTONS ====== */
@@ -56,30 +56,30 @@
       margin: 10px;
       padding: 18px 35px;
       border-radius: 50px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
       color: #fff;
       text-decoration: none;
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
-      min-width: 260px;
+      min-width: 240px;
       text-align: center;
     }
 
     .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
-    .btn-main {background-color: #1d3557;}
-    .btn-video {background-color: #ff4500;}
-    .btn-whatsapp {background-color: #25d366;}
-    .btn-facebook {background-color: #1877f2;}
-    .btn-youtube {background-color: #ff0000;}
-    .btn-tiktok {background-color: #000;}
+    .btn-main {background: linear-gradient(135deg,#1d3557,#457b9d);}
+    .btn-video {background: linear-gradient(135deg,#ff6a00,#ff4500);}
+    .btn-whatsapp {background: linear-gradient(135deg,#25d366,#128c7e);}
+    .btn-facebook {background: linear-gradient(135deg,#1877f2,#145dbf);}
+    .btn-youtube {background: linear-gradient(135deg,#ff0000,#cc0000);}
+    .btn-tiktok {background: linear-gradient(135deg,#000,#111);}
     .btn-instagram {background: radial-gradient(circle at 30% 30%, #f58529, #dd2a7b, #8134af, #515bd4);}
-    .btn-telegram {background-color: #0088cc;}
-    .btn-group {background-color: #6c757d;}
+    .btn-telegram {background: linear-gradient(135deg,#0088cc,#006699);}
+    .btn-group {background: linear-gradient(135deg,#6c757d,#495057);}
 
     .section {
       padding: 60px 20px;
@@ -100,6 +100,7 @@
       align-items: flex-start;
       margin-bottom: 40px;
       gap: 20px;
+      position: relative;
     }
 
     .column {
@@ -108,12 +109,28 @@
       gap: 20px;
     }
 
-    .column.right {align-items: flex-end;}
-    .column.left {align-items: flex-start;}
+    .column.right a:nth-child(2){margin-top:30px;}
+    .column.right a:nth-child(3){margin-top:60px;}
+    .column.left a:nth-child(1){margin-top:30px;}
+    .column.left a:nth-child(2){margin-top:60px;}
+    .column.left a:nth-child(3){margin-top:90px;}
 
     .center-btn {
       text-align: center;
       margin-top: 30px;
+    }
+
+    /* ====== SUPPORT ====== */
+    .support-row {
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-bottom:20px;
+    }
+    .support-single {
+      text-align:center;
+      margin-bottom:20px;
     }
 
     footer {
@@ -131,6 +148,7 @@
       .hero-text {text-align: center; margin-top: 20px;}
       .staircase {flex-direction: column; align-items: center;}
       .column.right, .column.left {align-items: center;}
+      .column.right a, .column.left a {margin-top:0 !important;}
     }
   </style>
 </head>
@@ -138,10 +156,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <!-- اللوجو أقصى الشمال -->
     <img src="logo.png" alt="شعار ميكس كيميا" class="logo">
-    
-    <!-- النصوص أقصى اليمين -->
     <div class="hero-text">
       <h1>اهلا بيك في عيلتنا</h1>
       <p>ميكس كيميا - مستر محمد عارف</p>
@@ -183,11 +198,21 @@
   <!-- الدعم العلمي -->
   <section class="section">
     <div class="section-title">الدعم العلمي</div>
-    <div class="column" style="align-items:center; gap:20px;">
-      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث الثانوي (رقم 1)</a>
-      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث الثانوي (رقم 2)</a>
-      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📘 الصف الثاني الثانوي</a>
-      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📗 الصف الأول الثانوي</a>
+
+    <!-- الصف الثالث -->
+    <div class="support-row">
+      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث (رقم 1)</a>
+      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث (رقم 2)</a>
+    </div>
+
+    <!-- الصف الثاني -->
+    <div class="support-single">
+      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📘 الصف الثاني</a>
+    </div>
+
+    <!-- الصف الأول -->
+    <div class="support-single">
+      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📗 الصف الأول</a>
     </div>
   </section>
 
