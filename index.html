@@ -17,31 +17,50 @@
       line-height: 1.6;
     }
 
-   .hero {
-  background: url('hero-bg.jpeg') no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 70px 20px;
-}
-
-
-    .hero img {
-      width: 160px;
-      margin-bottom: 20px;
+    /* ====== HERO ====== */
+    .hero {
+      background: url('hero-bg.jpeg') no-repeat center center/cover;
+      color: #fff;
+      padding: 120px 40px 100px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      text-align: center;
     }
 
-    .hero h1 {
+    .hero-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .hero .logo {
+      width: 150px;
+      height: auto;
+    }
+
+    .hero-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-text h1 {
       font-size: 40px;
       font-weight: 700;
-      margin-bottom: 15px;
+      margin: 15px 0 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
     }
 
-    .hero p {
+    .hero-text p {
       font-size: 22px;
-      font-weight: 400;
+      font-weight: 500;
       margin: 0;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     }
 
+    /* ====== BUTTONS ====== */
     .btn {
       display: inline-block;
       margin: 10px;
@@ -53,7 +72,7 @@
       text-decoration: none;
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
-      min-width: 250px; /* عرض موحّد */
+      min-width: 260px;
       text-align: center;
     }
 
@@ -84,7 +103,7 @@
       color: #1d3557;
     }
 
-    /* شكل الدرج */
+    /* ====== SOCIAL STAIRCASE ====== */
     .staircase {
       display: flex;
       justify-content: space-between;
@@ -118,22 +137,24 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      .staircase {
-        flex-direction: column;
-        align-items: center;
-      }
-      .column.right, .column.left {
-        align-items: center;
-      }
+      .hero-content {flex-direction: column; text-align: center;}
+      .hero .logo {margin-bottom: 20px;}
+      .staircase {flex-direction: column; align-items: center;}
+      .column.right, .column.left {align-items: center;}
     }
   </style>
 </head>
 <body>
 
+  <!-- HERO -->
   <section class="hero">
-    <img src="logo.png" alt="شعار منصة ميكس كيميا التعليمية">
-    <h1>اهلا بيك في عيلتنا</h1>
-    <p> ميكس كيميا - مستر محمد عارف</p>
+    <div class="hero-content">
+      <img src="logo.png" alt="شعار ميكس كيميا" class="logo">
+      <div class="hero-text">
+        <h1>اهلا بيك في عيلتنا</h1>
+        <p>ميكس كيميا - مستر محمد عارف</p>
+      </div>
+    </div>
   </section>
 
   <!-- روابط المنصة -->
@@ -154,11 +175,11 @@
       <div class="column left">
         <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
         <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
-        <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i>  جروب الفيسبوك</a>
+        <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i> جروب</a>
       </div>
     </div>
     <div class="center-btn">
-      <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i>قناة الواتساب</a>
+      <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> قناة واتساب</a>
     </div>
   </section>
 
