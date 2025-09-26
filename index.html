@@ -13,62 +13,51 @@
       font-family: 'Cairo', sans-serif;
       margin: 0;
       background: #f8f9fa;
+      color: #333;
     }
 
     /* ====== HERO ====== */
     .hero {
-      background: url('hero-bg.jpeg') no-repeat center center/cover;
+      background: linear-gradient(135deg, #1d3557, #457b9d);
       color: #fff;
-      padding: 40px 20px;
-      min-height: 300px; /* رجعت الحجم زي الأول */
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
+      text-align: center;
+      padding: 60px 20px;
     }
 
-    .hero .logo {
-      width: 140px;
-      height: auto;
+    .hero img {
+      width: 150px;
+      margin-bottom: 20px;
     }
 
-    .hero-text {
-      text-align: right;
-      margin-top: 40px; /* نزول الكلام تحت شوية */
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
     }
 
-    .hero-text h1 {
-      font-size: 36px;
-      font-weight: 700;
-      margin: 0 0 10px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-    }
-
-    .hero-text p {
+    .hero p {
       font-size: 20px;
-      font-weight: 500;
       margin: 0;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
 
     /* ====== BUTTONS ====== */
     .btn {
       display: inline-block;
-      margin: 10px;
-      padding: 18px 35px;
+      margin: 8px;
+      padding: 15px 28px;
       border-radius: 50px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
       color: #fff;
       text-decoration: none;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
-      min-width: 260px;
+      min-width: 220px;
       text-align: center;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.25);
     }
 
     .btn-main {background-color: #1d3557;}
@@ -82,13 +71,13 @@
     .btn-group {background-color: #6c757d;}
 
     .section {
-      padding: 60px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
 
     .section-title {
-      font-size: 28px;
-      margin-bottom: 35px;
+      font-size: 26px;
+      margin-bottom: 25px;
       font-weight: 700;
       color: #1d3557;
     }
@@ -98,14 +87,15 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 40px;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .column {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      flex: 1;
     }
 
     .column.right {align-items: flex-end;}
@@ -113,7 +103,22 @@
 
     .center-btn {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 25px;
+    }
+
+    /* ====== SUPPORT SCIENCE ====== */
+    .support-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .support-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
     }
 
     footer {
@@ -121,16 +126,15 @@
       padding: 20px;
       background: #1d3557;
       color: #fff;
-      font-size: 16px;
+      font-size: 15px;
       margin-top: 60px;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
-      .hero {flex-direction: column; align-items: center; text-align: center;}
-      .hero-text {text-align: center; margin-top: 20px;}
       .staircase {flex-direction: column; align-items: center;}
       .column.right, .column.left {align-items: center;}
+      .btn {min-width: 200px;}
     }
   </style>
 </head>
@@ -138,14 +142,9 @@
 
   <!-- HERO -->
   <section class="hero">
-    <!-- اللوجو أقصى الشمال -->
-    <img src="logo.png" alt="شعار ميكس كيميا" class="logo">
-    
-    <!-- النصوص أقصى اليمين -->
-    <div class="hero-text">
-      <h1>اهلا بيك في عيلتنا</h1>
-      <p>ميكس كيميا - مستر محمد عارف</p>
-    </div>
+    <img src="logo.png" alt="شعار ميكس كيميا">
+    <h1>اهلا بيك في عيلتنا</h1>
+    <p>ميكس كيميا - مستر محمد عارف</p>
   </section>
 
   <!-- روابط المنصة -->
@@ -177,21 +176,4 @@
   <!-- الدعم الفني -->
   <section class="section">
     <div class="section-title">الدعم الفني</div>
-    <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp">💬 واتساب الدعم الفني</a>
-  </section>
-
-  <!-- الدعم العلمي -->
-  <section class="section">
-    <div class="section-title">الدعم العلمي</div>
-    <div class="column" style="align-items:center; gap:20px;">
-      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث الثانوي (رقم 1)</a>
-      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث الثانوي (رقم 2)</a>
-      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📘 الصف الثاني الثانوي</a>
-      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📗 الصف الأول الثانوي</a>
-    </div>
-  </section>
-
-  <footer>© 2025 ميكس كيميا - مستر محمد عارف</footer>
-
-</body>
-</html>
+    <a href="https://wa.me/201505262848" target="_blan_
