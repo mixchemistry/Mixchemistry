@@ -5,7 +5,6 @@
   <title>ميكس كيميا - مستر محمد عارف</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="منصة ميكس كيميا - مستر محمد عارف، دروس الكيمياء لجميع المراحل الثانوية.">
-  <meta name="keywords" content="كيمياء ثانوية عامة, ميكس كيميا, دروس كيمياء, محمد عارف, كيمياء">
   <link rel="icon" href="logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +13,7 @@
       font-family: 'Cairo', sans-serif;
       margin: 0;
       background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-      color: #222;
+      overflow-x: hidden;
     }
 
     /* ====== HERO ====== */
@@ -27,17 +26,20 @@
       align-items: flex-start;
       justify-content: space-between;
       flex-wrap: wrap;
+      position: relative;
     }
 
     .hero .logo {
       width: 140px;
       height: auto;
+      z-index: 10;
     }
 
     .hero-text {
       text-align: right;
-      margin-top: 200px;
-      max-width: 600px;
+      margin-top: 220px;
+      flex: 1;
+      z-index: 10;
     }
 
     .hero-text h1 {
@@ -54,13 +56,59 @@
       text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
     }
 
+    /* ====== BURGER MENU ====== */
+    .menu-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 28px;
+      color: #fff;
+      cursor: pointer;
+      display: none;
+      z-index: 11;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -260px;
+      width: 250px;
+      height: 100%;
+      background: #1d3557;
+      color: #fff;
+      padding: 30px 20px;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+      transition: right 0.3s ease;
+      z-index: 999;
+    }
+
+    .side-menu.open { right: 0; }
+
+    .side-menu h3 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 10px;
+    }
+
+    .side-menu a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 12px 0;
+      font-size: 16px;
+      transition: color 0.2s;
+    }
+
+    .side-menu a:hover { color: #ffcc00; }
+
     /* ====== BUTTONS ====== */
     .btn {
       display: inline-block;
       margin: 10px;
-      padding: 16px 28px;
-      border-radius: 12px;
-      font-size: 17px;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-size: 18px;
       font-weight: 600;
       color: #fff;
       text-decoration: none;
@@ -71,7 +119,7 @@
     }
 
     .btn:hover {
-      transform: translateY(-3px) scale(1.02);
+      transform: translateY(-4px) scale(1.02);
       box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
@@ -102,22 +150,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      max-width: 900px;
-      margin: 0 auto 40px;
-    }
-
-    .social-grid .btn {
-      width: 100%;
-      margin: 0;
-    }
-
-    .social-grid .btn i {
-      margin-left: 8px;
-    }
-
-    .center-btn {
-      text-align: center;
-      margin-top: 20px;
+      justify-content: center;
     }
 
     /* ====== SUPPORT ====== */
@@ -142,31 +175,19 @@
       margin-top: 60px;
     }
 
-    /* ====== Floating Prayer Button ====== */
-    .pray-btn {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: linear-gradient(135deg,#ffd700,#ffae00);
-      color: #000;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 14px 20px;
-      border-radius: 50px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      text-decoration: none;
-      z-index: 999;
-      transition: 0.3s;
-    }
-    .pray-btn:hover {
-      transform: scale(1.1);
-      background: linear-gradient(135deg,#ffae00,#ffd700);
-    }
-
     /* Responsive */
     @media (max-width: 768px) {
-      .hero {flex-direction: column; align-items: center; text-align: center;}
-      .hero-text {text-align: center; margin-top: 20px;}
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-text {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .btn {min-width: 100%; padding: 15px;}
+      .menu-btn { display: block; }
     }
   </style>
 </head>
@@ -179,7 +200,18 @@
       <h1>اهلا بيك في عيلتنا</h1>
       <p>ميكس كيميا - مستر محمد عارف</p>
     </div>
+    <div class="menu-btn"><i class="fas fa-bars"></i></div>
   </section>
+
+  <!-- SIDE MENU -->
+  <div class="side-menu" id="sideMenu">
+    <h3>القائمة</h3>
+    <a href="https://mix-chemistry.com/home" target="_blank">🌐 المنصة</a>
+    <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank">🎥 ازاي تشترك</a>
+    <a href="#social">📲 تابعنا على</a>
+    <a href="#support-tech">💬 الدعم الفني</a>
+    <a href="#support-science">📚 الدعم العلمي</a>
+  </div>
 
   <!-- روابط المنصة -->
   <section class="section">
@@ -188,29 +220,29 @@
   </section>
 
   <!-- قسم تابعنا على -->
-  <section class="section">
+  <section class="section" id="social">
     <div class="section-title">تابعنا على</div>
     <div class="social-grid">
       <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook"></i> فيسبوك</a>
       <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
       <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok"><i class="fab fa-tiktok"></i> تيكتوك</a>
-      <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
-      <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
       <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i> جروب الفيسبوك</a>
+      <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
+      <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
     </div>
-    <div class="center-btn">
+    <div style="margin-top:25px;">
       <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> قناة الواتساب</a>
     </div>
   </section>
 
   <!-- الدعم الفني -->
-  <section class="section">
+  <section class="section" id="support-tech">
     <div class="section-title">الدعم الفني</div>
     <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp">💬 واتساب الدعم الفني</a>
   </section>
 
   <!-- الدعم العلمي -->
-  <section class="section">
+  <section class="section" id="support-science">
     <div class="section-title">الدعم العلمي</div>
 
     <!-- الصف الثالث -->
@@ -232,8 +264,20 @@
 
   <footer>© 2025 ميكس كيميا - مستر محمد عارف</footer>
 
-  <!-- زر الصلاة على النبي ﷺ -->
-  <a href="#" class="pray-btn">صلِّ على محمد ﷺ</a>
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const sideMenu = document.getElementById('sideMenu');
 
+    menuBtn.addEventListener('click', () => {
+      sideMenu.classList.toggle('open');
+    });
+
+    // يقفل المنيو أول ما تدوس على أي لينك
+    document.querySelectorAll('.side-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        sideMenu.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>
