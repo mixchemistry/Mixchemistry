@@ -5,6 +5,7 @@
   <title>ميكس كيميا - مستر محمد عارف</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="منصة ميكس كيميا - مستر محمد عارف، دروس الكيمياء لجميع المراحل الثانوية.">
+  <meta name="keywords" content="كيمياء ثانوية عامة, ميكس كيميا, دروس كيمياء, محمد عارف, كيمياء">
   <link rel="icon" href="logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,17 +14,19 @@
       font-family: 'Cairo', sans-serif;
       margin: 0;
       background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      color: #222;
     }
 
     /* ====== HERO ====== */
     .hero {
       background: url('hero-bg.jpeg') no-repeat center center/cover;
       color: #fff;
-      padding: 40px;
+      padding: 40px 20px;
       min-height: 350px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .hero .logo {
@@ -33,7 +36,8 @@
 
     .hero-text {
       text-align: right;
-      margin-top: 220px;
+      margin-top: 200px;
+      max-width: 600px;
     }
 
     .hero-text h1 {
@@ -54,20 +58,20 @@
     .btn {
       display: inline-block;
       margin: 10px;
-      padding: 18px 35px;
-      border-radius: 50px;
-      font-size: 18px;
+      padding: 16px 28px;
+      border-radius: 12px;
+      font-size: 17px;
       font-weight: 600;
       color: #fff;
       text-decoration: none;
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
-      min-width: 240px;
+      min-width: 220px;
       text-align: center;
     }
 
     .btn:hover {
-      transform: translateY(-4px) scale(1.02);
+      transform: translateY(-3px) scale(1.02);
       box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
@@ -93,31 +97,27 @@
       color: #1d3557;
     }
 
-    /* ====== SOCIAL STAIRCASE ====== */
-    .staircase {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 40px;
+    /* ====== SOCIAL GRID ====== */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      position: relative;
+      max-width: 900px;
+      margin: 0 auto 40px;
     }
 
-    .column {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    .social-grid .btn {
+      width: 100%;
+      margin: 0;
     }
 
-    .column.right a:nth-child(2){margin-top:30px;}
-    .column.right a:nth-child(3){margin-top:60px;}
-    .column.left a:nth-child(1){margin-top:30px;}
-    .column.left a:nth-child(2){margin-top:60px;}
-    .column.left a:nth-child(3){margin-top:90px;}
+    .social-grid .btn i {
+      margin-left: 8px;
+    }
 
     .center-btn {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     /* ====== SUPPORT ====== */
@@ -142,13 +142,31 @@
       margin-top: 60px;
     }
 
+    /* ====== Floating Prayer Button ====== */
+    .pray-btn {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: linear-gradient(135deg,#ffd700,#ffae00);
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 14px 20px;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      text-decoration: none;
+      z-index: 999;
+      transition: 0.3s;
+    }
+    .pray-btn:hover {
+      transform: scale(1.1);
+      background: linear-gradient(135deg,#ffae00,#ffd700);
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .hero {flex-direction: column; align-items: center; text-align: center;}
       .hero-text {text-align: center; margin-top: 20px;}
-      .staircase {flex-direction: column; align-items: center;}
-      .column.right, .column.left {align-items: center;}
-      .column.right a, .column.left a {margin-top:0 !important;}
     }
   </style>
 </head>
@@ -172,17 +190,13 @@
   <!-- قسم تابعنا على -->
   <section class="section">
     <div class="section-title">تابعنا على</div>
-    <div class="staircase">
-      <div class="column right">
-        <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook"></i> فيسبوك</a>
-        <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok"><i class="fab fa-tiktok"></i> تيكتوك</a>
-        <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
-      </div>
-      <div class="column left">
-        <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
-        <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i> جروب الفيسبوك</a>
-        <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
-      </div>
+    <div class="social-grid">
+      <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook"></i> فيسبوك</a>
+      <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
+      <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok"><i class="fab fa-tiktok"></i> تيكتوك</a>
+      <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
+      <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
+      <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i> جروب الفيسبوك</a>
     </div>
     <div class="center-btn">
       <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> قناة الواتساب</a>
@@ -217,6 +231,9 @@
   </section>
 
   <footer>© 2025 ميكس كيميا - مستر محمد عارف</footer>
+
+  <!-- زر الصلاة على النبي ﷺ -->
+  <a href="#" class="pray-btn">صلِّ على محمد ﷺ</a>
 
 </body>
 </html>
