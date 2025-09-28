@@ -102,6 +102,7 @@
     /* ====== SOCIAL GRID ====== */
     .social-grid {
       display: grid;
+      grid-template-columns: 1fr;
       gap: 15px;
       max-width: 500px;
       margin: 0 auto 20px;
@@ -113,6 +114,15 @@
       border-radius: 10px;
     }
 
+    /* ====== SUPPORT GRID ====== */
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
     footer {
       text-align: center;
       padding: 15px;
@@ -121,21 +131,25 @@
       font-size: 14px;
     }
 
-    /* ====== للموبايل (شاشات صغيرة) ====== */
-    @media (max-width: 768px) {
-      .btn {width: 90%; display: block; min-width: auto;}
-      .social-grid {grid-template-columns: 1fr 1fr;}
-      .hero-text h1 {font-size: 24px;}
-      .hero-text p {font-size: 16px;}
-      .hero {min-height: 250px; padding: 15px;}
-    }
-
-    /* ====== للكمبيوتر (شاشات كبيرة) ====== */
+    /* ====== Desktop adjustments ====== */
     @media (min-width: 769px) {
-      .btn {width: auto; display: inline-block; min-width: 220px;}
-      .social-grid {grid-template-columns: repeat(3,1fr);}
-      .hero-text h1 {font-size: 40px;}
-      .hero-text p {font-size: 22px;}
+      .btn {width: auto; display: inline-block; min-width: 200px;}
+
+      /* Social buttons on 2 rows */
+      .social-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      /* WhatsApp channel centered */
+      .whatsapp-center {
+        grid-column: span 3;
+        justify-self: center;
+      }
+
+      /* Support grid for scientific support */
+      .support-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -165,9 +179,10 @@
       <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
       <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
       <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i> جروب الفيسبوك</a>
-    </div>
 
-    <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> قناة الواتساب</a>
+      <!-- قناة الواتساب في النص على الكمبيوتر -->
+      <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp whatsapp-center"><i class="fab fa-whatsapp"></i> قناة الواتساب</a>
+    </div>
   </section>
 
   <!-- الدعم الفني -->
@@ -179,8 +194,10 @@
   <!-- الدعم العلمي -->
   <section class="section">
     <div class="section-title">الدعم العلمي</div>
-    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث (رقم 1)</a>
-    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث (رقم 2)</a>
+    <div class="support-grid">
+      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث (رقم 1)</a>
+      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث (رقم 2)</a>
+    </div>
     <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📘 الصف الثاني</a>
     <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📗 الصف الأول</a>
   </section>
