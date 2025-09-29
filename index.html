@@ -115,19 +115,16 @@
 
     @media (min-width: 1024px) {
       .social-grid {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
         max-width: 1000px;
+        gap: 30px;
+        align-items: start;
       }
-      .column {display: flex;flex-direction: column;gap: 20px;}
-      .column.right a:nth-child(2){margin-top:30px;}
-      .column.right a:nth-child(3){margin-top:60px;}
-      .column.left a:nth-child(1){margin-top:30px;}
-      .column.left a:nth-child(2){margin-top:60px;}
-      .column.left a:nth-child(3){margin-top:90px;}
-      .center-btn {text-align:center;margin-top:30px;}
+      .social-grid a {margin: 0;} /* شيلنا المارجن علشان التوزيع يبقى قصاد بعض */
+      .center-btn {
+        grid-column: 2;
+        justify-self: center;
+      }
     }
 
     /* ====== SUPPORT GRID ====== */
@@ -171,19 +168,18 @@
   <section class="card">
     <div class="section-title">تابعنا على</div>
     <div class="social-grid">
-      <div class="column right">
-        <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook"></i> فيسبوك</a>
-        <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok"><i class="fab fa-tiktok"></i> تيكتوك</a>
-        <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
-      </div>
-      <div class="center-btn">
-        <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> قناة واتساب</a>
-      </div>
-      <div class="column left">
-        <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
-        <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
-        <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i> جروب الفيسبوك</a>
-      </div>
+      <!-- يمين -->
+      <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook"></i> فيسبوك</a>
+      <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok"><i class="fab fa-tiktok"></i> تيكتوك</a>
+      <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
+
+      <!-- النص -->
+      <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp center-btn"><i class="fab fa-whatsapp"></i> قناة واتساب</a>
+
+      <!-- شمال -->
+      <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
+      <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
+      <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i> جروب الفيسبوك</a>
     </div>
   </section>
 
