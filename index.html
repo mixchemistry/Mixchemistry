@@ -147,23 +147,28 @@
     @media (min-width: 769px) {
       .btn {width: auto; display: inline-block; min-width: 200px;}
 
-      /* Support grid for scientific support */
       .support-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (min-width: 1024px) {
-      /* social grid: 3 يمين + 3 شمال */
+      /* social grid: 6 أعمدة للصف الأول */
       .social-grid {
         grid-template-columns: repeat(6, 1fr);
         gap: 20px;
       }
 
-      /* قناة الواتساب في النص تحت */
+      /* أول 6 أزرار فوق */
+      .social-grid a:nth-child(-n+6) {
+        grid-row: 1;
+      }
+
+      /* زرار الواتساب تحت بالعرض */
       .whatsapp-center {
-        grid-column: 3 / span 2;
+        grid-column: 1 / span 6;
         justify-self: center;
+        max-width: 250px;
       }
 
       .hero-text h1 {font-size: 42px;}
@@ -199,7 +204,7 @@
       <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
       <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i> جروب الفيسبوك</a>
 
-      <!-- قناة الواتساب في النص على الكمبيوتر -->
+      <!-- قناة الواتساب تحت -->
       <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp whatsapp-center"><i class="fab fa-whatsapp"></i> قناة الواتساب</a>
     </div>
   </section>
