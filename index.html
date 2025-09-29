@@ -12,6 +12,7 @@
       background: #f8f9fa;
     }
 
+    /* ===== HERO ===== */
     .hero {
       background: url('hero-bg.jpeg') no-repeat center center/cover;
       color: #fff;
@@ -33,20 +34,29 @@
     .hero-text h1 {font-size: 32px;margin: 0 0 10px;}
     .hero-text p {font-size: 18px;margin: 0;}
 
+    /* ===== BUTTONS ===== */
     .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 10px;
       font-size: 16px;
       font-weight: 600;
       color: #fff;
       text-decoration: none;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: 0.3s;
-      min-width: 220px;   /* كل الأزرار نفس المقاس */
+      transition: all 0.3s ease;
+      min-width: 220px;
+      max-width: 240px;
+      height: 55px;
+      margin: 0 auto;
     }
-    .btn:hover {transform: translateY(-3px);}
+    .btn i {margin-left: 8px;font-size: 18px;}
+    .btn:hover {transform: translateY(-4px) scale(1.02);box-shadow: 0 6px 16px rgba(0,0,0,0.25);}
+
+    /* ألوان */
     .btn-main {background: linear-gradient(135deg,#1d3557,#457b9d);}
     .btn-video {background: linear-gradient(135deg,#ff6a00,#ff4500);}
     .btn-facebook {background: linear-gradient(135deg,#1877f2,#145dbf);}
@@ -60,7 +70,7 @@
     .section {padding: 40px 20px;text-align:center;}
     .section-title {font-size: 22px;margin-bottom:20px;font-weight:700;color:#1d3557;}
 
-    /* موبايل = كل حاجة تحت بعض */
+    /* ===== MOBILE default (stacked) ===== */
     .social-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -69,7 +79,7 @@
       margin: 0 auto;
     }
 
-    /* كمبيوتر = درج */
+    /* ===== DESKTOP staircase ===== */
     @media (min-width: 1024px) {
       .social-grid {
         display: flex;
@@ -86,7 +96,6 @@
       .column.left a:nth-child(2){margin-top:60px;}
       .column.left a:nth-child(3){margin-top:90px;}
       .center-btn {text-align:center;margin-top:30px;}
-      .center-btn a {min-width: 220px;}
     }
 
     .support-grid {
@@ -110,22 +119,27 @@
     </div>
   </section>
 
+  <!-- روابط المنصة -->
   <section class="section">
-    <a href="https://mix-chemistry.com/home" target="_blank" class="btn btn-main">🌐 المنصة</a>
-    <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank" class="btn btn-video">🎥 ازاي تشترك في المنصة</a>
+    <a href="https://mix-chemistry.com/home" target="_blank" class="btn btn-main"><i class="fa fa-globe"></i> المنصة</a>
+    <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank" class="btn btn-video"><i class="fa fa-video"></i> ازاي تشترك في المنصة</a>
   </section>
 
+  <!-- تابعنا على -->
   <section class="section">
     <div class="section-title">تابعنا على</div>
     <div class="social-grid">
+      <!-- right -->
       <div class="column right">
         <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook"></i> فيسبوك</a>
         <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok"><i class="fab fa-tiktok"></i> تيكتوك</a>
         <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
       </div>
+      <!-- center -->
       <div class="center-btn">
         <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> قناة واتساب</a>
       </div>
+      <!-- left -->
       <div class="column left">
         <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
         <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
@@ -134,19 +148,21 @@
     </div>
   </section>
 
+  <!-- الدعم الفني -->
   <section class="section">
     <div class="section-title">الدعم الفني</div>
-    <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp">💬 واتساب الدعم الفني</a>
+    <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب الدعم الفني</a>
   </section>
 
+  <!-- الدعم العلمي -->
   <section class="section">
     <div class="section-title">الدعم العلمي</div>
     <div class="support-grid">
-      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث (رقم 1)</a>
-      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📚 الصف الثالث (رقم 2)</a>
+      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الثالث (رقم 1)</a>
+      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الثالث (رقم 2)</a>
     </div>
-    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp">📘 الصف الثاني</a>
-    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp">📗 الصف الأول</a>
+    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الثاني</a>
+    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الأول</a>
   </section>
 
   <footer>© 2025 ميكس كيميا - مستر محمد عارف</footer>
