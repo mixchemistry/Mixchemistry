@@ -38,6 +38,7 @@
       position: relative;
       z-index: 1;
       margin-bottom: 30px;
+      animation: fadeInUp 1s ease;
     }
     .hero-text h1 {
       font-size: 32px;
@@ -57,6 +58,7 @@
       padding: 30px 20px;
       margin: 30px auto;
       max-width: 1000px;
+      animation: fadeInUp 1s ease;
     }
 
     .section-title {
@@ -88,10 +90,18 @@
     }
     .btn i {font-size: 18px;}
     .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      transform: translateY(-3px) scale(1.02);
       filter: brightness(1.1);
     }
+
+    /* Glow لكل زرار */
+    .btn-facebook:hover { box-shadow: 0 0 15px rgba(24,119,242,0.6); }
+    .btn-youtube:hover { box-shadow: 0 0 15px rgba(255,0,0,0.6); }
+    .btn-whatsapp:hover { box-shadow: 0 0 15px rgba(37,211,102,0.6); }
+    .btn-tiktok:hover { box-shadow: 0 0 15px rgba(0,0,0,0.6); }
+    .btn-instagram:hover { box-shadow: 0 0 15px rgba(221,42,123,0.6); }
+    .btn-telegram:hover { box-shadow: 0 0 15px rgba(0,136,204,0.6); }
+    .btn-group:hover { box-shadow: 0 0 15px rgba(108,117,125,0.6); }
 
     /* ألوان */
     .btn-main {background: linear-gradient(135deg,#1d3557,#457b9d);}
@@ -120,7 +130,7 @@
         gap: 30px;
         align-items: start;
       }
-      .social-grid a {margin: 0;} /* شيلنا المارجن علشان التوزيع يبقى قصاد بعض */
+      .social-grid a {margin: 0;}
       .center-btn {
         grid-column: 2;
         justify-self: center;
@@ -137,14 +147,31 @@
     }
     @media (min-width:769px){.support-grid {grid-template-columns:repeat(2,1fr);}}
 
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* ====== FOOTER ====== */
     footer {
       text-align: center;
-      padding: 15px;
-      background: #1d3557;
+      padding: 20px;
+      background: linear-gradient(135deg,#1d3557,#457b9d);
       color: #fff;
       font-size: 14px;
       margin-top: 30px;
     }
+    .footer-icons {
+      margin-top: 10px;
+    }
+    .footer-icons a {
+      color: #fff;
+      margin: 0 8px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    .footer-icons a:hover {color: #ffdd57;}
   </style>
 </head>
 <body>
@@ -202,7 +229,15 @@
     <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الأول</a>
   </section>
 
-  <footer>© 2025 ميكس كيميا - مستر محمد عارف</footer>
+  <footer>
+    © 2025 ميكس كيميا - مستر محمد عارف
+    <div class="footer-icons">
+      <a href="https://facebook.com/mixchemistry1" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://youtube.com/@mixchemistry1" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com/mixchemistry1" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
 
 </body>
 </html>
