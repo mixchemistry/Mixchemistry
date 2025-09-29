@@ -68,8 +68,9 @@
       color: #1d3557;
     }
 
-    /* ====== BUTTONS ====== */
+    /* ====== BUTTONS (Glass + Glow) ====== */
     .btn {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -81,29 +82,40 @@
       color: #fff;
       text-decoration: none;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
       min-width: 220px;
       max-width: 260px;
       height: 55px;
       margin: 0 auto;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
     }
-    .btn i {font-size: 18px;}
-    .btn:hover {
-      transform: translateY(-3px) scale(1.02);
-      filter: brightness(1.1);
+    .btn i {font-size: 18px; transition: 0.3s;}
+    .btn:hover i {transform: scale(1.2) rotate(-5deg);}
+    .btn:active {
+      transform: scale(0.97);
+      box-shadow: inset 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    /* Glow لكل زرار */
-    .btn-facebook:hover { box-shadow: 0 0 15px rgba(24,119,242,0.6); }
-    .btn-youtube:hover { box-shadow: 0 0 15px rgba(255,0,0,0.6); }
-    .btn-whatsapp:hover { box-shadow: 0 0 15px rgba(37,211,102,0.6); }
-    .btn-tiktok:hover { box-shadow: 0 0 15px rgba(0,0,0,0.6); }
-    .btn-instagram:hover { box-shadow: 0 0 15px rgba(221,42,123,0.6); }
-    .btn-telegram:hover { box-shadow: 0 0 15px rgba(0,136,204,0.6); }
-    .btn-group:hover { box-shadow: 0 0 15px rgba(108,117,125,0.6); }
+    /* Border Glow Animation */
+    .btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 2px;
+      background: linear-gradient(45deg, #ff6a00, #ff0000, #25d366, #0088cc);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .btn:hover::before {opacity: 1;}
 
-    /* ألوان */
+    /* زرار مخصص */
     .btn-main {background: linear-gradient(135deg,#1d3557,#457b9d);}
     .btn-video {background: linear-gradient(135deg,#ff6a00,#ff4500);}
     .btn-whatsapp {background: linear-gradient(135deg,#25d366,#128c7e);}
@@ -122,7 +134,6 @@
       max-width: 500px;
       margin: 0 auto;
     }
-
     @media (min-width: 1024px) {
       .social-grid {
         grid-template-columns: 1fr 1fr 1fr;
@@ -130,7 +141,6 @@
         gap: 30px;
         align-items: start;
       }
-      .social-grid a {margin: 0;}
       .center-btn {
         grid-column: 2;
         justify-self: center;
@@ -171,7 +181,7 @@
       font-size: 18px;
       transition: 0.3s;
     }
-    .footer-icons a:hover {color: #ffdd57;}
+    .footer-icons a:hover {transform: scale(1.2) rotate(-5deg);color: #ffdd57;}
   </style>
 </head>
 <body>
