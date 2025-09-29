@@ -22,6 +22,22 @@
       100% {background-position: 0% 50%;}
     }
 
+    /* ===== HEADER ===== */
+    .header {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      z-index: 100;
+    }
+    .logo {
+      height: 55px;
+      width: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    .logo:hover {transform: scale(1.05);}
+
     /* ===== HERO ===== */
     .hero {
       background: url('hero-bg.jpeg') no-repeat center center/cover;
@@ -102,7 +118,6 @@
     .btn:hover i {transform: scale(1.2) rotate(-5deg);}
     .btn:active {transform: scale(0.97);box-shadow: inset 0 4px 8px rgba(0,0,0,0.2);}
 
-    /* Border Glow */
     .btn::before {
       content: "";
       position: absolute;
@@ -118,7 +133,6 @@
     }
     .btn:hover::before {opacity: 1;}
 
-    /* ألوان */
     .btn-main {background: linear-gradient(135deg,#1d3557,#457b9d);}
     .btn-video {background: linear-gradient(135deg,#ff6a00,#ff4500);}
     .btn-whatsapp {background: linear-gradient(135deg,#25d366,#128c7e);}
@@ -157,13 +171,11 @@
     }
     @media (min-width:769px){.support-grid {grid-template-columns:repeat(2,1fr);}}
 
-    /* ====== ANIMATIONS ====== */
     @keyframes fadeInUp {
       from {opacity: 0; transform: translateY(20px);}
       to {opacity: 1; transform: translateY(0);}
     }
 
-    /* ====== FOOTER ====== */
     footer {
       text-align: center;
       padding: 20px;
@@ -181,7 +193,6 @@
     }
     .footer-icons a:hover {transform: scale(1.2) rotate(-5deg);color: #ffdd57;}
 
-    /* زرار رجوع للأعلى */
     #scrollTopBtn {
       position: fixed;
       bottom: 20px;
@@ -204,6 +215,13 @@
 </head>
 <body>
 
+  <!-- HEADER LOGO -->
+  <header class="header">
+    <a href="index.html">
+      <img src="logo.png" alt="ميكس كيميا" class="logo">
+    </a>
+  </header>
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-text">
@@ -223,15 +241,12 @@
   <section class="card">
     <div class="section-title">تابعنا على</div>
     <div class="social-grid">
-      <!-- يمين -->
       <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook"></i> فيسبوك</a>
       <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok"><i class="fab fa-tiktok"></i> تيكتوك</a>
       <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
 
-      <!-- النص -->
       <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp center-btn"><i class="fab fa-whatsapp"></i> قناة واتساب</a>
 
-      <!-- شمال -->
       <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
       <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
       <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i> جروب الفيسبوك</a>
@@ -267,7 +282,6 @@
     </div>
   </footer>
 
-  <!-- Scroll To Top Btn -->
   <button id="scrollTopBtn">⬆</button>
   <script>
     const btn = document.getElementById("scrollTopBtn");
