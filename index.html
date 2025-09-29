@@ -12,10 +12,10 @@
     body {
       font-family: 'Cairo', sans-serif;
       margin: 0;
-      background: #f8f9fa;
+      background: #f0f2f5;
     }
 
-    /* ====== HERO ====== */
+    /* ===== HERO ===== */
     .hero {
       background: url('hero-bg.jpeg') no-repeat center center/cover;
       color: #fff;
@@ -40,15 +40,30 @@
       margin-bottom: 30px;
     }
     .hero-text h1 {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 700;
       margin: 0 0 10px;
-      line-height: 1.4;
     }
     .hero-text p {
       font-size: 18px;
       margin: 0;
-      line-height: 1.6;
+    }
+
+    /* ====== CARD ====== */
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 30px 20px;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 25px;
+      font-weight: 700;
+      color: #1d3557;
     }
 
     /* ====== BUTTONS ====== */
@@ -56,22 +71,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 20px;
-      border-radius: 10px;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 50px;
       font-size: 16px;
       font-weight: 600;
       color: #fff;
       text-decoration: none;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
       min-width: 220px;
-      max-width: 240px;
+      max-width: 260px;
       height: 55px;
       margin: 0 auto;
     }
-    .btn i {margin-left: 8px;font-size: 18px;}
-    .btn:hover {transform: translateY(-4px) scale(1.02);box-shadow: 0 6px 16px rgba(0,0,0,0.25);}
+    .btn i {font-size: 18px;}
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      filter: brightness(1.1);
+    }
 
     /* ألوان */
     .btn-main {background: linear-gradient(135deg,#1d3557,#457b9d);}
@@ -84,21 +104,8 @@
     .btn-telegram {background: linear-gradient(135deg,#0088cc,#006699);}
     .btn-group {background: linear-gradient(135deg,#6c757d,#495057);}
 
-    /* ====== SECTION ====== */
-    .section {padding: 40px 15px;text-align: center;}
-    .section-title {font-size: 22px;margin-bottom: 25px;font-weight: 700;color: #1d3557;}
-
     /* ====== SOCIAL GRID ====== */
     .social-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
-      max-width: 500px;
-      margin: 0 auto 20px;
-    }
-
-    /* ====== SUPPORT GRID ====== */
-    .support-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 15px;
@@ -106,15 +113,6 @@
       margin: 0 auto;
     }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #1d3557;
-      color: #fff;
-      font-size: 14px;
-    }
-
-    /* ====== Desktop adjustments ====== */
     @media (min-width: 1024px) {
       .social-grid {
         display: flex;
@@ -131,6 +129,25 @@
       .column.left a:nth-child(3){margin-top:90px;}
       .center-btn {text-align:center;margin-top:30px;}
     }
+
+    /* ====== SUPPORT GRID ====== */
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    @media (min-width:769px){.support-grid {grid-template-columns:repeat(2,1fr);}}
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #1d3557;
+      color: #fff;
+      font-size: 14px;
+      margin-top: 30px;
+    }
   </style>
 </head>
 <body>
@@ -144,13 +161,14 @@
   </section>
 
   <!-- روابط المنصة -->
-  <section class="section">
+  <section class="card">
     <a href="https://mix-chemistry.com/home" target="_blank" class="btn btn-main"><i class="fa fa-globe"></i> المنصة</a>
+    <br><br>
     <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank" class="btn btn-video"><i class="fa fa-video"></i> ازاي تشترك في المنصة</a>
   </section>
 
   <!-- تابعنا على -->
-  <section class="section">
+  <section class="card">
     <div class="section-title">تابعنا على</div>
     <div class="social-grid">
       <div class="column right">
@@ -170,22 +188,25 @@
   </section>
 
   <!-- الدعم الفني -->
-  <section class="section">
+  <section class="card">
     <div class="section-title">الدعم الفني</div>
     <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب الدعم الفني</a>
   </section>
 
   <!-- الدعم العلمي -->
-  <section class="section">
+  <section class="card">
     <div class="section-title">الدعم العلمي</div>
     <div class="support-grid">
       <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الثالث (رقم 1)</a>
       <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الثالث (رقم 2)</a>
     </div>
+    <br>
     <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الثاني</a>
+    <br><br>
     <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الأول</a>
   </section>
 
   <footer>© 2025 ميكس كيميا - مستر محمد عارف</footer>
+
 </body>
 </html>
