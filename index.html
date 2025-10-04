@@ -5,6 +5,7 @@
   <title>ميكس كيميا - مستر محمد عارف</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="منصة ميكس كيميا - مستر محمد عارف، دروس الكيمياء لجميع المراحل الثانوية.">
+  <meta name="theme-color" content="#1d3557">
   <link rel="icon" href="logo.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -80,13 +81,12 @@
     #scrollTopBtn {position: fixed;bottom: 20px;left: 20px;background: #1d3557;color: #fff;border: none;border-radius: 50%;width: 45px;height: 45px;font-size: 18px;cursor: pointer;display: none;box-shadow: 0 4px 10px rgba(0,0,0,0.3);transition: 0.3s;z-index: 1000;}
     #scrollTopBtn:hover {background: #457b9d;}
 
-    /* ANIMATIONS */
     @keyframes fadeInUp {from {opacity: 0; transform: translateY(20px);}to {opacity: 1; transform: translateY(0);}}
   </style>
 </head>
 <body>
 
-  <!-- HEADER LOGO -->
+  <!-- HEADER -->
   <header class="header">
     <a href="index.html"><img src="logo.png" alt="ميكس كيميا" class="logo"></a>
   </header>
@@ -99,7 +99,6 @@
     </div>
   </section>
 
-  <!-- Divider أبيض -->
   <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="wave-path" fill="#ffffff" d="M0,32L1440,96L1440,0L0,0Z"></path></svg></div>
 
   <!-- روابط المنصة -->
@@ -107,12 +106,19 @@
     <a href="https://mix-chemistry.com/home" target="_blank" class="btn btn-main"><i class="fa fa-globe"></i> المنصة</a>
     <br><br>
     <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank" class="btn btn-video"><i class="fa fa-video"></i> ازاي تشترك في المنصة</a>
+    <br><br>
+    <a href="#plan" class="btn btn-main"><i class="fa fa-calendar"></i> الخطة الزمنية للمنصة</a>
   </section>
 
-  <!-- Divider رمادي فاتح -->
+  <!-- قسم الخطة الزمنية -->
+  <section id="plan" class="card" style="margin-top: 40px;">
+    <div class="section-title">الخطة الزمنية للمنصة</div>
+    <img src="plan.jpg" alt="الخطة الزمنية" style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+  </section>
+
   <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="wave-path" fill="#f2f2f2" d="M0,64L1440,32L1440,0L0,0Z"></path></svg></div>
 
-  <!-- تابعنا على -->
+  <!-- تابعنا -->
   <section class="card">
     <div class="section-title">تابعنا على</div>
     <div class="social-grid">
@@ -126,7 +132,6 @@
     </div>
   </section>
 
-  <!-- Divider رمادي فاتح -->
   <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="wave-path" fill="#f2f2f2" d="M0,32L1440,96L1440,0L0,0Z"></path></svg></div>
 
   <!-- الدعم الفني -->
@@ -135,7 +140,6 @@
     <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب الدعم الفني</a>
   </section>
 
-  <!-- Divider رمادي فاتح -->
   <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="wave-path" fill="#f2f2f2" d="M0,64L1440,32L1440,0L0,0Z"></path></svg></div>
 
   <!-- الدعم العلمي -->
@@ -151,7 +155,6 @@
     <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الأول</a>
   </section>
 
-  <!-- Divider أزرق غامق -->
   <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="wave-path" fill="#1d3557" d="M0,64L1440,32L1440,0L0,0Z"></path></svg></div>
 
   <footer>
@@ -164,7 +167,6 @@
     </div>
   </footer>
 
-  <!-- Scroll Top -->
   <button id="scrollTopBtn">⬆</button>
   <script>
     const btn = document.getElementById("scrollTopBtn");
