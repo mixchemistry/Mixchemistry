@@ -3,52 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منصة ميكس كيميا</title>
+  <title>منصة ميكس كيميا - مستر محمد عارف</title>
+  <meta name="description" content="منصة ميكس كيميا - دروس الكيمياء لجميع المراحل الثانوية مع مستر محمد عارف.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
-      font-family: "Cairo", sans-serif;
-      background: #f7f7f7;
+      font-family: 'Cairo', sans-serif;
       margin: 0;
-      padding: 0;
+      background: linear-gradient(-45deg, #f8fbff, #e0f7fa, #f0f2f5, #e3f2fd);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
       text-align: center;
-      color: #333;
     }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpeg') no-repeat center center / cover;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-bg.jpeg') no-repeat center center/cover;
       color: #fff;
       padding: 100px 20px;
     }
-    .hero h1 {font-size: 36px; margin-bottom: 10px;}
-    .hero p {font-size: 18px; margin-bottom: 25px;}
+    .hero h1 {font-size: 36px; margin: 0 0 10px;}
+    .hero p {font-size: 18px; margin: 0 0 30px;}
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       margin: 10px;
-      padding: 15px 25px;
-      border-radius: 10px;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
       transition: 0.3s;
       cursor: pointer;
-    }
-    .btn-main {
-      background: #1d3557;
-      color: #fff;
-    }
-    .btn-main:hover {
-      background: #457b9d;
-      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
     .btn-video {
-      background: #e63946;
-      color: #fff;
+      background: linear-gradient(135deg, #ff6a00, #ff4500);
     }
     .btn-video:hover {
-      background: #d62828;
-      transform: translateY(-2px);
+      transform: scale(1.05);
+    }
+    .btn-main {
+      background: linear-gradient(135deg, #1d3557, #457b9d);
+    }
+    .btn-main:hover {
+      transform: scale(1.05);
     }
 
-    /* النافذة المنبثقة */
+    /* ====== POPUP ====== */
     .popup {
       display: none;
       position: fixed;
@@ -57,24 +69,25 @@
       background: rgba(0,0,0,0.7);
       justify-content: center;
       align-items: center;
-      z-index: 1000;
+      z-index: 999;
     }
     .popup-content {
       background: #fff;
       border-radius: 12px;
       padding: 15px;
-      max-width: 90%;
+      max-width: 95%;
       max-height: 90%;
       position: relative;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.3);
       overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+      animation: fadeIn 0.4s ease;
     }
     .popup-content img {
       width: 100%;
       height: auto;
       border-radius: 10px;
       transform-origin: center center;
-      transition: transform 0.3s ease;
+      transition: transform 0.2s ease;
       cursor: grab;
     }
     .close-btn {
@@ -96,20 +109,31 @@
       background: #c1121f;
       transform: scale(1.1);
     }
+    .zoom-hint {
+      font-size: 13px;
+      color: #555;
+      margin-top: 8px;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
   </style>
 </head>
+
 <body>
 
+  <!-- HERO -->
   <section class="hero">
-    <h1>مرحبًا بيك في منصة <span style="color:#ffd700;">ميكس كيميا</span></h1>
-    <p>منصة مستر محمد عارف لتعليم الكيمياء</p>
+    <h1>اهلاً بيك في منصة <span style="color:#ffd700;">ميكس كيميا</span></h1>
+    <p>مع مستر محمد عارف - دروس الكيمياء لجميع المراحل الثانوية</p>
 
-    <!-- زرار الاشتراك -->
+    <!-- زر الاشتراك -->
     <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank" class="btn btn-video">
       <i class="fa fa-video"></i> ازاي تشترك في المنصة
     </a>
 
-    <!-- زرار الخطة الزمنية -->
+    <!-- زر الخطة الزمنية -->
     <button class="btn btn-main" id="showPlanBtn">
       <i class="fa fa-calendar"></i> الخطة الزمنية للمنصة
     </button>
@@ -120,6 +144,7 @@
     <div class="popup-content">
       <button class="close-btn" id="closePopup">&times;</button>
       <img src="Plan.jpg" id="planImage" alt="الخطة الزمنية للمنصة">
+      <div class="zoom-hint">📱 يمكنك تكبير الصورة باللمس أو بالماوس 🔍</div>
     </div>
   </div>
 
@@ -129,45 +154,73 @@
     const closeBtn = document.getElementById('closePopup');
     const img = document.getElementById('planImage');
 
+    // فتح و غلق النافذة
     showBtn.addEventListener('click', () => popup.style.display = 'flex');
     closeBtn.addEventListener('click', () => popup.style.display = 'none');
     popup.addEventListener('click', (e) => {
       if (e.target === popup) popup.style.display = 'none';
     });
 
-    // الزوم بالماوس أو باللمس
+    // خاصية الزوم والسحب
     let scale = 1;
     let startDistance = 0;
+    let isDragging = false;
+    let startX = 0, startY = 0, currentX = 0, currentY = 0;
 
-    // تكبير وتصغير بالماوس
     img.addEventListener('wheel', (e) => {
       e.preventDefault();
       scale += e.deltaY * -0.001;
       scale = Math.min(Math.max(1, scale), 4);
-      img.style.transform = `scale(${scale})`;
+      img.style.transform = `scale(${scale}) translate(${currentX}px, ${currentY}px)`;
     });
 
-    // تكبير باللمس للموبايل
+    // لمس للموبايل
     img.addEventListener('touchstart', (e) => {
       if (e.touches.length === 2) {
-        e.preventDefault();
         const dx = e.touches[0].pageX - e.touches[1].pageX;
         const dy = e.touches[0].pageY - e.touches[1].pageY;
         startDistance = Math.sqrt(dx*dx + dy*dy);
+      } else if (e.touches.length === 1) {
+        isDragging = true;
+        startX = e.touches[0].clientX - currentX;
+        startY = e.touches[0].clientY - currentY;
       }
     });
 
     img.addEventListener('touchmove', (e) => {
       if (e.touches.length === 2) {
-        e.preventDefault();
         const dx = e.touches[0].pageX - e.touches[1].pageX;
         const dy = e.touches[0].pageY - e.touches[1].pageY;
         const newDistance = Math.sqrt(dx*dx + dy*dy);
         const zoom = newDistance / startDistance;
         let newScale = scale * zoom;
         newScale = Math.min(Math.max(1, newScale), 4);
-        img.style.transform = `scale(${newScale})`;
+        img.style.transform = `scale(${newScale}) translate(${currentX}px, ${currentY}px)`;
+      } else if (isDragging && e.touches.length === 1) {
+        currentX = e.touches[0].clientX - startX;
+        currentY = e.touches[0].clientY - startY;
+        img.style.transform = `scale(${scale}) translate(${currentX}px, ${currentY}px)`;
       }
+    });
+
+    img.addEventListener('touchend', () => { isDragging = false; });
+
+    // سحب بالماوس
+    img.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX - currentX;
+      startY = e.clientY - currentY;
+      img.style.cursor = 'grabbing';
+    });
+    img.addEventListener('mouseup', () => {
+      isDragging = false;
+      img.style.cursor = 'grab';
+    });
+    img.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      currentX = e.clientX - startX;
+      currentY = e.clientY - startY;
+      img.style.transform = `scale(${scale}) translate(${currentX}px, ${currentY}px)`;
     });
   </script>
 
