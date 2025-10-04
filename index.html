@@ -4,284 +4,143 @@
   <meta charset="UTF-8" />
   <title>ميكس كيميا - مستر محمد عارف</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="منصة ميكس كيميا - مستر محمد عارف، دروس الكيمياء لجميع المراحل الثانوية." />
+  <meta name="description" content="منصة ميكس كيميا - مستر محمد عارف، دروس الكيمياء لجميع المراحل الثانوية.">
 
-  <!-- Social Preview -->
-  <meta name="title" content="ميكس كيميا - مستر محمد عارف" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mix-chemistry.com/" />
-  <meta property="og:title" content="ميكس كيميا - مستر محمد عارف" />
-  <meta property="og:description" content="أفضل دروس الكيمياء لجميع المراحل الثانوية - مع مستر محمد عارف." />
-  <meta property="og:image" content="https://mix-chemistry.com/logo.png" />
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://mix-chemistry.com/" />
-  <meta property="twitter:title" content="ميكس كيميا - مستر محمد عارف" />
-  <meta property="twitter:description" content="أفضل دروس الكيمياء لجميع المراحل الثانوية - مع مستر محمد عارف." />
-  <meta property="twitter:image" content="https://mix-chemistry.com/logo.png" />
+  <!-- Meta / OG -->
+  <meta property="og:title" content="ميكس كيميا - مستر محمد عارف">
+  <meta property="og:description" content="أفضل دروس الكيمياء لجميع المراحل الثانوية - مع مستر محمد عارف.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mix-chemistry.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ميكس كيميا - مستر محمد عارف">
+  <meta name="twitter:description" content="أفضل دروس الكيمياء لجميع المراحل الثانوية - مع مستر محمد عارف.">
+  <meta name="twitter:image" content="logo.png">
 
-  <link rel="icon" href="logo.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* ====== Base ====== */
     :root {
-      --primary-1: #1d3557;
-      --primary-2: #457b9d;
-      --muted: #f2f2f2;
-      --card-shadow: rgba(13, 42, 64, 0.08);
+      --c1:#1d3557;
+      --c2:#457b9d;
+      --muted:#f2f2f2;
     }
-    * {box-sizing: border-box}
-    html,body{height:100%}
+    *{box-sizing:border-box}
     body {
-      font-family: 'Cairo', sans-serif;
-      margin: 0;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      background: linear-gradient(-45deg, #f8fbff, #e0f7fa, #f0f2f5, #e3f2fd);
-      background-size: 400% 400%;
-      animation: gradientBG 18s ease infinite;
-      color: #123;
-      line-height: 1.6;
-      direction: rtl;
+      font-family:'Cairo',sans-serif;margin:0;
+      background:linear-gradient(-45deg,#f8fbff,#e0f7fa,#f0f2f5,#e3f2fd);
+      background-size:400% 400%;
+      animation:bg 18s ease infinite;
     }
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    /* ====== Header Logo ====== */
-    .header {
-      position: absolute;
-      top: 16px;
-      left: 20px;
-      z-index: 120;
-    }
-    .logo {height:55px; width:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.18); transition: transform .25s ease;}
-    .logo:hover {transform: scale(1.04) rotate(-1deg);}
-
-    /* ====== Hero ====== */
-    .hero {
-      background: url('hero-bg.jpeg') no-repeat center center/cover;
-      color: #fff;
-      padding: 40px 20px 120px;
-      min-height: 360px;
-      display:flex;
-      align-items:flex-end;
-      justify-content:center;
-      text-align:center;
-      position: relative;
-      overflow:hidden;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-      z-index: 0;
-    }
-    .hero-text {position: relative; z-index: 2; margin-bottom: 30px;}
-    .hero-text h1 {font-size: 34px; font-weight:700; margin:0 0 8px;}
-    .hero-text p {font-size:18px; margin:0; opacity:0.95}
-
-    /* ====== Card (main sections) ====== */
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px var(--card-shadow);
-      padding: 28px 20px;
-      margin: 24px auto;
-      max-width: 1000px;
-      position: relative;
-      z-index: 10;
-      transition: transform .35s ease, box-shadow .35s ease;
-      overflow: visible;
-    }
-    .card:hover {transform: translateY(-6px); box-shadow:0 12px 30px rgba(13,42,64,0.12)}
-    .section-title {font-size:22px; margin-bottom:18px; font-weight:700; color:var(--primary-1)}
-
-    /* ====== Divider Waves ====== */
-    .divider {line-height:0; overflow:hidden;}
-    .divider svg {display:block; width:100%; height:80px;}
-    .wave-path {animation: waveMove 10s linear infinite;}
-    @keyframes waveMove {0%{transform:translateX(0)}50%{transform:translateX(-20px)}100%{transform:translateX(0)}}
-
-    /* ====== Buttons ====== */
-    .btn {
-      position: relative;
-      display: inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:12px 20px;
-      border-radius:50px;
-      font-size:15px;
-      font-weight:600;
-      color:#fff;
-      text-decoration:none;
-      min-width:180px;
-      height:48px;
-      border:1px solid rgba(255,255,255,0.15);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform .28s ease, box-shadow .28s ease;
-      backdrop-filter: blur(6px);
-    }
-    .btn i {font-size:16px; transition: transform .28s ease;}
-    .btn:hover {transform: translateY(-4px)}
-    .btn:hover i {transform: scale(1.15) rotate(-5deg)}
-
-    .btn-main{background:linear-gradient(135deg,var(--primary-1),var(--primary-2))}
+    @keyframes bg {0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .header{position:absolute;top:15px;left:20px;z-index:100}
+    .logo{height:55px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.2);transition:.3s}
+    .logo:hover{transform:scale(1.05)}
+    .hero{background:url('hero-bg.jpeg')center/cover no-repeat;color:#fff;min-height:360px;display:flex;align-items:flex-end;justify-content:center;text-align:center;position:relative;padding-bottom:60px}
+    .hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
+    .hero-text{position:relative;z-index:1}
+    .hero-text h1{font-size:32px;margin:0}
+    .hero-text p{margin:8px 0 0}
+    .card{background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);padding:28px 20px;margin:24px auto;max-width:1000px;transition:.3s}
+    .card:hover{transform:translateY(-5px)}
+    .section-title{font-size:22px;font-weight:700;color:var(--c1);margin-bottom:18px}
+    .divider svg{width:100%;height:80px;display:block}
+    .wave-path{animation:wave 10s linear infinite}
+    @keyframes wave{0%{transform:translateX(0)}50%{transform:translateX(-25px)}100%{transform:translateX(0)}}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:50px;font-weight:600;color:#fff;text-decoration:none;min-width:180px;transition:.3s;margin:5px auto}
+    .btn i{transition:.3s}
+    .btn:hover i{transform:scale(1.1) rotate(-5deg)}
+    .btn-main{background:linear-gradient(135deg,var(--c1),var(--c2))}
     .btn-video{background:linear-gradient(135deg,#ff6a00,#ff4500)}
     .btn-facebook{background:linear-gradient(135deg,#1877f2,#145dbf)}
     .btn-telegram{background:linear-gradient(135deg,#0088cc,#006699)}
     .btn-whatsapp{background:linear-gradient(135deg,#25d366,#128c7e)}
     .btn-youtube{background:linear-gradient(135deg,#ff0000,#cc0000)}
-    .btn-instagram{background:radial-gradient(circle at 30% 30%, #f58529, #dd2a7b, #8134af, #515bd4)}
-
-    /* ====== Grid Social ====== */
-    .social-grid {display:grid; grid-template-columns:1fr; gap:14px; max-width:520px; margin:0 auto;}
-    @media (min-width:1024px){ .social-grid{grid-template-columns:repeat(3,1fr); max-width:1000px; gap:26px; align-items:start} .center-btn{grid-column:2; justify-self:center} }
-
-    /* ====== Support Grid ====== */
-    .support-grid {display:grid; grid-template-columns:1fr; gap:12px; max-width:520px; margin:0 auto;}
-    @media (min-width:769px){ .support-grid{grid-template-columns:repeat(2,1fr)} }
-
-    /* ====== Footer ====== */
-    footer {text-align:center; padding:18px; background:linear-gradient(135deg,var(--primary-1),var(--primary-2)); color:#fff; font-size:14px; margin-top:0}
-    .footer-icons {margin-top:10px}
-    .footer-icons a {color:#fff; margin:0 8px; font-size:18px; transition: transform .28s}
-    .footer-icons a:hover {transform:scale(1.18); color:#ffdd57}
-
-    /* ====== Scroll Top ====== */
-    #scrollTopBtn {
-      position: fixed; bottom: 22px; left: 22px;
-      width:48px; height:48px; border-radius:50%;
-      border:none; cursor:pointer; z-index:120;
-      background:var(--primary-1); color:#fff; font-size:18px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.18); opacity:0; transform:scale(.85);
-      transition: all .32s ease;
-      display:flex; align-items:center; justify-content:center;
-    }
-    #scrollTopBtn.show {opacity:1; transform:scale(1)}
-    #scrollTopBtn:hover {background:var(--primary-2)}
-
-    /* ====== Scroll Animations (initial state) ====== */
-    .animate {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .7s ease, transform .7s cubic-bezier(.2,.9,.3,1);
-      will-change: transform, opacity;
-    }
-
-    /* variants */
-    .anim-fade-up { transform: translateY(18px); }
-    .anim-fade-left { transform: translateX(18px); }
-    .anim-fade-right{ transform: translateX(-18px); }
-    .anim-zoom { transform: scale(.98); }
-
-    /* when visible */
-    .in-view {
-      opacity: 1;
-      transform: translateY(0) translateX(0) scale(1);
-    }
-
-    /* small tweaks for elements */
-    .hero-text[data-animate] { transition-duration: .9s; }
-    .card[data-animate] { transition-duration: .75s; }
-    .btn[data-animate] { transition-duration: .55s; }
-    .section-title[data-animate] { transition-duration: .7s; }
-
-    /* Responsive spacing */
-    @media (max-width:600px){
-      .hero {padding:30px 16px 80px}
-      .hero-text h1{font-size:26px}
-      .card{padding:22px 14px}
-      .btn{min-width:150px;height:44px}
-    }
+    .btn-instagram{background:radial-gradient(circle at 30% 30%,#f58529,#dd2a7b,#8134af,#515bd4)}
+    .btn-group{background:linear-gradient(135deg,#6c757d,#495057)}
+    .social-grid{display:grid;gap:15px;max-width:500px;margin:auto}
+    @media(min-width:1024px){.social-grid{grid-template-columns:repeat(3,1fr);max-width:1000px;gap:26px}.center-btn{grid-column:2;justify-self:center}}
+    .support-grid{display:grid;gap:15px;max-width:500px;margin:auto}
+    @media(min-width:769px){.support-grid{grid-template-columns:repeat(2,1fr)}}
+    footer{text-align:center;padding:18px;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;font-size:14px}
+    .footer-icons a{color:#fff;margin:0 8px;transition:.3s}
+    .footer-icons a:hover{transform:scale(1.1);color:#ffdd57}
+    #scrollTopBtn{position:fixed;bottom:22px;left:22px;width:46px;height:46px;border:none;border-radius:50%;background:var(--c1);color:#fff;cursor:pointer;display:none;box-shadow:0 4px 10px rgba(0,0,0,.3)}
+    #scrollTopBtn:hover{background:var(--c2)}
+    /* Animations */
+    .animate{opacity:0;transform:translateY(18px);transition:.7s cubic-bezier(.2,.9,.3,1)}
+    .in-view{opacity:1;transform:none}
   </style>
 </head>
 <body>
 
-  <!-- HEADER LOGO -->
   <header class="header">
-    <a href="index.html"><img src="logo.png" alt="ميكس كيميا" class="logo" /></a>
+    <a href="index.html"><img src="logo.png" class="logo" alt="ميكس كيميا"></a>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
-    <div class="hero-text" data-animate data-anim="fade-up" data-delay="0">
+    <div class="hero-text animate">
       <h1>اهلا بيك في عيلتنا</h1>
       <p>ميكس كيميا - مستر محمد عارف</p>
     </div>
   </section>
 
-  <!-- Divider أبيض -->
-  <div class="divider" data-animate data-anim="fade-up" data-delay="80">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="wave-path" fill="#ffffff" d="M0,32L1440,96L1440,0L0,0Z"></path></svg>
+  <div class="divider animate">
+    <svg viewBox="0 0 1440 120"><path class="wave-path" fill="#fff" d="M0,32L1440,96L1440,0L0,0Z"></path></svg>
   </div>
 
-  <!-- روابط المنصة -->
-  <section class="card" data-animate data-anim="fade-up" data-delay="140">
-    <a href="https://mix-chemistry.com/home" target="_blank" class="btn btn-main" data-animate data-anim="fade-right" data-delay="180"><i class="fa fa-globe"></i> المنصة</a>
-    <br><br>
-    <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank" class="btn btn-video" data-animate data-anim="fade-left" data-delay="220"><i class="fa fa-video"></i> ازاي تشترك في المنصة</a>
+  <section class="card animate">
+    <a href="https://mix-chemistry.com/home" target="_blank" class="btn btn-main"><i class="fa fa-globe"></i> المنصة</a><br><br>
+    <a href="https://youtu.be/zzdqyYfpw88?feature=shared" target="_blank" class="btn btn-video"><i class="fa fa-video"></i> ازاي تشترك في المنصة</a>
   </section>
 
-  <!-- Divider رمادي فاتح -->
-  <div class="divider" data-animate data-anim="fade-up" data-delay="260">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="wave-path" fill="#f2f2f2" d="M0,64L1440,32L1440,0L0,0Z"></path></svg>
+  <div class="divider animate">
+    <svg viewBox="0 0 1440 120"><path class="wave-path" fill="#f2f2f2" d="M0,64L1440,32L1440,0L0,0Z"></path></svg>
   </div>
 
-  <!-- تابعنا على -->
-  <section class="card" data-animate data-anim="fade-up" data-delay="320">
-    <div class="section-title" data-animate data-anim="fade-up" data-delay="360">تابعنا على</div>
+  <section class="card animate">
+    <div class="section-title">تابعنا على</div>
     <div class="social-grid">
-      <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook" data-animate data-anim="fade-right" data-delay="400"><i class="fab fa-facebook"></i> فيسبوك</a>
-      <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok" data-animate data-anim="fade-up" data-delay="440"><i class="fab fa-tiktok"></i> تيكتوك</a>
-      <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram" data-animate data-anim="fade-left" data-delay="480"><i class="fab fa-telegram"></i> تليجرام</a>
-      <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp center-btn" data-animate data-anim="fade-up" data-delay="520"><i class="fab fa-whatsapp"></i> قناة واتساب</a>
-      <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube" data-animate data-anim="fade-right" data-delay="560"><i class="fab fa-youtube"></i> يوتيوب</a>
-      <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram" data-animate data-anim="fade-up" data-delay="600"><i class="fab fa-instagram"></i> انستجرام</a>
-      <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group" data-animate data-anim="fade-left" data-delay="640"><i class="fa fa-users"></i> جروب الفيسبوك</a>
+      <a href="https://facebook.com/mixchemistry1" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook"></i> فيسبوك</a>
+      <a href="https://www.tiktok.com/@mixchemistry1" target="_blank" class="btn btn-tiktok"><i class="fab fa-tiktok"></i> تيكتوك</a>
+      <a href="https://t.me/+Gv-9olKBXtg3YTQ0" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> تليجرام</a>
+      <a href="https://whatsapp.com/channel/0029VbBicehEawdqGqoW7q1j" target="_blank" class="btn btn-whatsapp center-btn"><i class="fab fa-whatsapp"></i> قناة واتساب</a>
+      <a href="https://youtube.com/@mixchemistry1" target="_blank" class="btn btn-youtube"><i class="fab fa-youtube"></i> يوتيوب</a>
+      <a href="https://instagram.com/mixchemistry1" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> انستجرام</a>
+      <a href="https://m.facebook.com/groups/334354954908345" target="_blank" class="btn btn-group"><i class="fa fa-users"></i> جروب الفيسبوك</a>
     </div>
   </section>
 
-  <!-- Divider رمادي فاتح -->
-  <div class="divider" data-animate data-anim="fade-up" data-delay="700">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="wave-path" fill="#f2f2f2" d="M0,32L1440,96L1440,0L0,0Z"></path></svg>
+  <div class="divider animate">
+    <svg viewBox="0 0 1440 120"><path class="wave-path" fill="#f2f2f2" d="M0,64L1440,32L1440,0L0,0Z"></path></svg>
   </div>
 
-  <!-- الدعم الفني -->
-  <section class="card" data-animate data-anim="fade-up" data-delay="760">
-    <div class="section-title" data-animate data-anim="fade-up" data-delay="800">الدعم الفني</div>
-    <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp" data-animate data-anim="fade-up" data-delay="840"><i class="fab fa-whatsapp"></i> واتساب الدعم الفني</a>
+  <section class="card animate">
+    <div class="section-title">الدعم الفني</div>
+    <a href="https://wa.me/201505262848" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب الدعم الفني</a>
   </section>
 
-  <!-- Divider رمادي فاتح -->
-  <div class="divider" data-animate data-anim="fade-up" data-delay="900">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="wave-path" fill="#f2f2f2" d="M0,64L1440,32L1440,0L0,0Z"></path></svg>
+  <div class="divider animate">
+    <svg viewBox="0 0 1440 120"><path class="wave-path" fill="#f2f2f2" d="M0,64L1440,32L1440,0L0,0Z"></path></svg>
   </div>
 
-  <!-- الدعم العلمي -->
-  <section class="card" data-animate data-anim="fade-up" data-delay="960">
-    <div class="section-title" data-animate data-anim="fade-up" data-delay="1000">الدعم العلمي</div>
+  <section class="card animate">
+    <div class="section-title">الدعم العلمي</div>
     <div class="support-grid">
-      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp" data-animate data-anim="fade-right" data-delay="1040"><i class="fab fa-whatsapp"></i> الصف الثالث (رقم 1)</a>
-      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp" data-animate data-anim="fade-left" data-delay="1080"><i class="fab fa-whatsapp"></i> الصف الثالث (رقم 2)</a>
-    </div>
-    <br>
-    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp" data-animate data-anim="fade-up" data-delay="1120"><i class="fab fa-whatsapp"></i> الصف الثاني</a>
-    <br><br>
-    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp" data-animate data-anim="fade-up" data-delay="1160"><i class="fab fa-whatsapp"></i> الصف الأول</a>
+      <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الثالث (رقم 1)</a>
+      <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الثالث (رقم 2)</a>
+    </div><br>
+    <a href="https://wa.me/201557102966" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الثاني</a><br><br>
+    <a href="https://wa.me/201559828600" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> الصف الأول</a>
   </section>
 
-  <!-- Divider أزرق غامق -->
-  <div class="divider" data-animate data-anim="fade-up" data-delay="1220">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="wave-path" fill="#1d3557" d="M0,64L1440,32L1440,0L0,0Z"></path></svg>
+  <div class="divider animate">
+    <svg viewBox="0 0 1440 120"><path class="wave-path" fill="#1d3557" d="M0,64L1440,32L1440,0L0,0Z"></path></svg>
   </div>
 
-  <footer data-animate data-anim="fade-up" data-delay="1280">
+  <footer class="animate">
     © 2025 ميكس كيميا - مستر محمد عارف
     <div class="footer-icons">
       <a href="https://facebook.com/mixchemistry1" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -291,68 +150,16 @@
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <button id="scrollTopBtn" aria-label="العودة للأعلى">⬆</button>
+  <button id="scrollTopBtn">⬆</button>
 
   <script>
-    // ====== Scroll to Top button ======
-    const scrollBtn = document.getElementById('scrollTopBtn');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) scrollBtn.classList.add('show');
-      else scrollBtn.classList.remove('show');
-    });
-    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // ====== IntersectionObserver-based gentle scroll animations ======
-    (function(){
-      const ANIM_CLASS = 'in-view';
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -8% 0px', // trigger slightly before element fully in view
-        threshold: 0
-      };
-
-      const animateTargets = Array.from(document.querySelectorAll('[data-animate]'));
-
-      // set initial variant classes based on data-anim
-      animateTargets.forEach(el => {
-        const type = (el.dataset.anim || 'fade-up').trim();
-        if (type === 'fade-up') el.classList.add('anim-fade-up');
-        else if (type === 'fade-left') el.classList.add('anim-fade-left');
-        else if (type === 'fade-right') el.classList.add('anim-fade-right');
-        else if (type === 'zoom') el.classList.add('anim-zoom');
-        el.classList.add('animate');
-      });
-
-      let observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
-            // compute delay if provided
-            const delay = parseInt(el.dataset.delay) || 0;
-            // small stagger: if container has children with data-animate, they keep relative offsets
-            setTimeout(() => {
-              el.classList.add(ANIM_CLASS);
-            }, delay);
-            // Once animated, unobserve to improve perf
-            obs.unobserve(el);
-          }
-        });
-      }, observerOptions);
-
-      animateTargets.forEach(el => observer.observe(el));
-    })();
-
-    // Accessibility: reduce motion respect (disable animations if user prefers reduced motion)
-    (function(){
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReduced) {
-        document.querySelectorAll('.animate').forEach(el => {
-          el.style.transition = 'none';
-          el.classList.add('in-view'); // show immediately
-        });
-      }
-    })();
+    const btn=document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll",()=>{btn.style.display=window.scrollY>300?"block":"none"});
+    btn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+    const els=document.querySelectorAll(".animate");
+    const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in-view");obs.unobserve(x.target)}})},{threshold:0.15});
+    els.forEach(el=>obs.observe(el));
   </script>
+
 </body>
 </html>
